@@ -1,0 +1,79 @@
+<form [formGroup]="formGroup">
+<div class="wrapper">
+        <div *ngIf="!(auth.loggedIn | async); else loggedIn">
+            <ng-container *ngIf="!register; else registerr">
+                <mat-form-field appearance="fill">
+                    <mat-label>نام کاربری</mat-label>
+                    <input formControlName="email" matInput />
+                    <mat-error *ngIf="formGroup.getError('required', 'email')">نام کاربری اجباریست</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>رمز عبور</mat-label>
+                    <input formControlName="password" matInput />
+                    <mat-error *ngIf="formGroup.getError('required', 'password')">رمز عبور اجباریست</mat-error>
+                </mat-form-field>
+                <button mat-raised-button color="primary" (click)="login()">ورود</button>
+                <button mat-raised-button color="accent" class="mt-3" (click)="register= true;">ثبت نام</button>
+            </ng-container>
+            
+        </div>
+
+        <ng-template #loggedIn>
+            <img src="../../assets/user.png" width="100px" height="100px" style="border-radius: 50%;" />
+            <p>{{auth.email}}</p>
+            <button mat-raised-button color="warn" (click)="logout()">خروج</button>
+
+        </ng-template>
+    </div>
+</form>
+
+<ng-template #registerr>
+    <form [formGroup]="registerFormGroup">
+        <div class="wrapper">
+        <mat-form-field appearance="fill">
+            <mat-label>ایمیل</mat-label>
+            <input formControlName="email" matInput />
+            <mat-error *ngIf="formGroup.getError('required', 'email')">نام کاربری اجباریست</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>رمز عبور</mat-label>
+            <input formControlName="password" matInput />
+            <mat-error type="password" *ngIf="formGroup.getError('required', 'password')">رمز عبور اجباریست</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>نام</mat-label>
+            <input formControlName="firstName" matInput />
+            <mat-error *ngIf="formGroup.getError('required', 'firstName')">نام  اجباریست</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label> نام خانوادگی</mat-label>
+            <input formControlName="lastName" matInput />
+            <mat-error *ngIf="formGroup.getError('required', 'lastName')">نام خانوادگی اجباریست</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>ادرس</mat-label>
+            <input formControlName="address" matInput />
+            <mat-error *ngIf="formGroup.getError('required', 'address')">ادرس  اجباریست</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>شهر</mat-label>
+            <input formControlName="city" matInput />
+            <mat-error *ngIf="formGroup.getError('required', 'city')">شهر    اجباریست</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>شماره</mat-label>
+            <input formControlName="phone" matInput />
+            <mat-error *ngIf="formGroup.getError('required', 'phone')">شماره اجباریست</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="accent" (click)="Register()">ثبت نام</button>
+        <button mat-raised-button color="primary" class="mt-3" (click)="register=false;">ورود</button>
+
+        </div>
+    </form>
+</ng-template>

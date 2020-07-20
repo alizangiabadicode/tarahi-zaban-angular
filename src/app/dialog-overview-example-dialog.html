@@ -1,0 +1,11 @@
+<div class="wrapper">
+    <img [src]="data[4]" />
+    <div class="product--detail">
+        <h1>{{data[1]}}</h1>
+        <p>{{data[3]}}</p>
+        <p>ریال {{data[2]}}</p>
+
+        <button mat-raised-button color="primary" (click)="addToCard(data[0])">افزودن به سبد خرید</button>
+    </div>
+    
+</div>

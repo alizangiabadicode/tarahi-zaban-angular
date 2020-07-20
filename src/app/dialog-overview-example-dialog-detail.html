@@ -1,0 +1,20 @@
+<ng-container *ngIf="data.products.length > 0; else noItem">
+    <div style="display: flex; flex-direction: row-reverse; justify-content: space-between;">
+        <p>قیمت کل</p>
+        <p>{{data.totalPrice}} ریال</p>
+    </div>
+    <div class="wrapper" *ngFor="let d of data.products" >
+        <img [src]="d[3]" />
+        <div class="product--detail">
+            <h1>{{d[1]}}</h1>
+            <p>ریال {{d[2]}}</p>
+
+            <button mat-raised-button color="warn" (click)="removeFromCard(d[0])">حذف از سبد خرید</button>
+        </div>
+        
+    </div>
+    <mat-divider></mat-divider>
+</ng-container>
+<ng-template #noItem>
+    
+</ng-template>
