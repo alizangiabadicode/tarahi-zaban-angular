@@ -1,7 +1,7 @@
 <mat-drawer-container class="example-container">
   <mat-drawer-content>
     
-    <!-- <mat-toolbar>
+    <mat-toolbar>
       <button *ngIf="auth.loggedIn | async" (click)="openCardItems()"  mat-icon-button>
         <mat-icon>shopping_bag</mat-icon>
       </button>
@@ -12,19 +12,19 @@
         <div class="header--card">
           {{p[1]}}
         </div>
-        <img src="../assets/user.png" width="200px" height="150px" />
+        <img src="../assets/network.jpg" width="200px" height="150px" />
 
         <div class="footer-card">
           <p> ریال {{p[2]}}</p>
           <button mat-raised-button>خرید</button>  ‌‍
         </div>
       </div>
-    </div> -->
+    </div>
   </mat-drawer-content>
     <mat-drawer mode="side" opened  >
       <app-login></app-login>
-      <!-- <ng-container *ngFor="let c of categories">
+      <ng-container *ngFor="let c of categories">
         <button (click)="getProducts(c[0])" mat-button >{{c[1]}}</button>
-      </ng-container> -->
+      </ng-container>
     </mat-drawer>
 </mat-drawer-container>

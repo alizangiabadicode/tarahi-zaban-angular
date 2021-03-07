@@ -6,6 +6,8 @@
   }
   ::ng-deep mat-drawer-content {
       width: 70%;
+      margin-left: 0 !important;
+      margin-right: auto;
   }
   ::ng-deep mat-drawer {
       button {
