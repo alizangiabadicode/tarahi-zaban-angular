@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACL,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,WAAW;EAC3B,MAAM,EAAE,IAAI;CAcf;;AAjBD,AAII,QAJI,CAIJ,GAAG,CAAC;EACA,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;CAChB;;AAPL,AASI,QATI,CASJ,gBAAgB,CAAC;EACb,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,MAAM;CACrB",
+    "sources": [
+        "dialog-overview-example-dialog-detail.scss"
+    ],
+    "names": [],
+    "file": "dialog-overview-example-dialog-detail.css"
+}

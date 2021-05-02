@@ -1,0 +1,15 @@
+::ng-deep mat-form-field {
+  text-align: center !important;
+  width: 100%;
+}
+
+::ng-deep mat-form-field input {
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+}
+/*# sourceMappingURL=login.component.css.map */

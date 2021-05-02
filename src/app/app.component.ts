@@ -10,12 +10,25 @@ import { AuthService } from './services/auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'tarahi-zaban';
   categories = [];
   category
+  search: string
   products: any;
+  filteredProducts: any
   constructor(private http: HttpClient, public dialog: MatDialog, public auth: AuthService) {
     this.getCetagories();
+  }
+
+  onSearch() {
+    console.log({
+      search: this.products
+    })
+    this.filteredProducts = this.products?.data[0]?.filter(e=>e[1]?.toLowerCase().includes(this.search.toLowerCase()))
+    this.filteredProducts = {
+      data: [
+        this.filteredProducts
+      ]
+    }
   }
 
   getCetagories() {
@@ -34,7 +47,7 @@ export class AppComponent {
       .subscribe(
         n => {
           console.log(n);
-          this.products = n;
+          this.products = this.filteredProducts = n;
         }
       )
   }

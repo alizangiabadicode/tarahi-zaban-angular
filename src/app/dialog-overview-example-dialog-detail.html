@@ -3,8 +3,8 @@
         <p>قیمت کل</p>
         <p>{{data.totalPrice}} ریال</p>
     </div>
-    <div class="wrapper" *ngFor="let d of data.products" >
-        <img [src]="d[3]" />
+    <div class="wrapper" style="margin: 10px;" *ngFor="let d of data.products" >
+        <img style="border-radius: 20px;" [src]="d[3]" />
         <div class="product--detail">
             <h1>{{d[1]}}</h1>
             <p>ریال {{d[2]}}</p>
@@ -15,6 +15,10 @@
     </div>
     <mat-divider></mat-divider>
 </ng-container>
+
+<div *ngIf="!data?.products?.length">
+    کالایی در سبد خرید وجود ندارد
+</div>
 <ng-template #noItem>
     
 </ng-template>

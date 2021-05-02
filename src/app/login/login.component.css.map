@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC,cAAc,CAAC;EACrB,UAAU,EAAE,iBAAiB;EAK7B,KAAK,EAAE,IAAI;CAEd;;AARD,AAEI,SAFK,CAAC,cAAc,CAEpB,KAAK,CAAC;EACF,UAAU,EAAE,MAAM;CACrB;;AAML,AAAA,QAAQ,CAAC;EAEL,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,MAAM;CACrB",
+    "sources": [
+        "login.component.scss"
+    ],
+    "names": [],
+    "file": "login.component.css"
+}

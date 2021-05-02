@@ -14,7 +14,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     src: url('assets/IRANSansWeb.ttf');
   }
   
-  * {
+
+
+  body:not(mat-icon) {
     font-family: iranSans !important;
   }
-  
